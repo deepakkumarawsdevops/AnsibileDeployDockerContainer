@@ -27,11 +27,11 @@ stage('Docker build using ansible')
 
 steps
 {
- sh 'ansible-playbook  ansible-image.yml'
+ sh 'ansible-playbook ansible-image.yml'
 }
 
 }
-stage('login to dcoker hub'
+stage('login to dcoker hub')
 
 {
 steps
@@ -47,7 +47,7 @@ steps
   echo 'releasing'
   sh 'docker push deepakkumarawsdevops/ansibledockeri:01'
  }
-}i
+}
  stage('Deployment')
 {
 steps
