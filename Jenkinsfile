@@ -14,20 +14,21 @@ stages
    sh 'mvn release'
    sh 'mvn install'
   }
-
+}
  stage('Release')
-
+{
  steps
  {
   echo 'releasing'
  }
-
+}
  stage('Deployment')
-
+{
+steps
  {
    echo 'deploying...'
  }
-
+}
 }
 
 }
