@@ -1,10 +1,10 @@
 ---
 - name: Create image using docker file
   hosts : all
-  becomie : yes
+  become : yes
   tasks:
   - name : build docker image 
-    command : docker build -t ans:01 .
+    command : docker build -t ansblecus:01 .
 ...      
 
 
