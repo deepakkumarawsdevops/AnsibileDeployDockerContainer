@@ -4,7 +4,7 @@
   become : yes
   tasks:
   - name : build docker image 
-    command : docker build -t ansblecus:01 .
+    command : docker build -t deepakkumarawsdevops/ansibledockeri:01 .
 ...      
 
 
