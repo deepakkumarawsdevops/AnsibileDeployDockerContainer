@@ -11,7 +11,7 @@ stages
   steps
   {
    echo 'building'
-   sh 'mvn release'
+   sh 'mvn package'
    sh 'mvn install'
   }
 }
