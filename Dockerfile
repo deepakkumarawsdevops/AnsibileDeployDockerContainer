@@ -1,32 +1,5 @@
-pipelines
-{
-ageny any
+FROM tomcat
 
-stages
+COPY /target/* /usr/local/tomcat/webapps/
 
- {
-
- stage('Build')
- {
-  steps
-  { 
-   echo 'building'
-   sh 'mvn release'
-   sh 'mvn install'
-  } 
-
- stage('Release')
-
- steps
- {
-  echo 'releasing'
- }
-
- stage('Deployment')
-
- {
-   echo 'deploying...'
- }
-
- }
 
