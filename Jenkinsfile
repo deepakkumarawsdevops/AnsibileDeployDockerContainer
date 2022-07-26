@@ -1,6 +1,6 @@
 pipelines
 {
-ageny any
+agent any
 
 stages
 
