@@ -5,5 +5,6 @@
   tasks:
   - name : build docker image 
     command : docker build -t ans:01 .
+...      
 
 
