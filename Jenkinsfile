@@ -1,7 +1,12 @@
 pipeline
 {
 agent {label 'ansible-node'}
+environment
+{
+DOCKERHUB_CREDENTIALS = credentials('docker-hub-login')
 
+
+}
 stages
 
  {
@@ -26,13 +31,23 @@ steps
 }
 
 }
- stage('Release')
+stage('login to dcoker hub'
+
+{
+steps
+{
+  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+}
+
+}
+ stage('Release to DockerHub')
 {
  steps
  {
   echo 'releasing'
+  sh 'docker push deepakkumarawsdevops/ansibledockeri:01'
  }
-}
+}i
  stage('Deployment')
 {
 steps
