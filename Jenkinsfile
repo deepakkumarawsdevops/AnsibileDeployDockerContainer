@@ -53,6 +53,7 @@ steps
 steps
  {
    echo 'deploying...'
+   sh 'ansible-playbook ansible-deployment.yml'
  }
 }
 }

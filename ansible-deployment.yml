@@ -1,1 +1,9 @@
-
+---
+- name : Deployment using docker image
+  hosts : node2
+  become : yes
+    
+  tasks:
+   - name : create a conatiner
+     command :docker container run -dt --name latenight -p 8080:8080 deepakkumarawsdevops/ansibledockeri:01
+...     
