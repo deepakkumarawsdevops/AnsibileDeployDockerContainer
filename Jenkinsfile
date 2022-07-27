@@ -45,7 +45,7 @@ steps
  steps
  {
   echo 'releasing'
-  sh 'docker push deepakkumarawsdevops/ansibledockeri:01'
+  sh 'docker push deepakkumarawsdevops/ansibledockerimage:01'
  }
 }
  stage('Deployment')
