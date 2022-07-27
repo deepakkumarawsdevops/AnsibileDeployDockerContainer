@@ -1,6 +1,6 @@
 ---
 - name: Create image using docker file
-  hosts : all
+  hosts : localhost
   become : yes
   tasks:
   - name : build docker image 
