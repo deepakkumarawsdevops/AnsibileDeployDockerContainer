@@ -4,6 +4,10 @@
   become : yes
     
   tasks:
+   - name : stop container 
+     command : docker container stop odessy
+   - name : delete container
+     command : docker container rm odessy
    - name : create a conatiner
-     command : docker container run -dt --name latenight -p 8080:8080 deepakkumarawsdevops/ansibledockeri:01
+     command : docker container run -dt --name odessy -p 8080:8080 deepakkumarawsdevops/ansibledockerimage:01
 ...     
